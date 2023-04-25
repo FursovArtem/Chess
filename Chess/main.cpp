@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <cstdio>
 #include <ctime>
@@ -25,9 +25,9 @@ void chess_v1(int size)
 				for (int l = 0; l < size; l++)
 				{
 					//cout << (i + k & 1 ^ 0 ? "  " : "* ");
-					//òî æå ñàìîå ÷òî è
+					//Ñ‚Ð¾ Ð¶Ðµ ÑÐ°Ð¼Ð¾Ðµ Ñ‡Ñ‚Ð¾ Ð¸
 					//cout << (i + k & 1 ? "  " : "* ");
-					//èëè
+					//Ð¸Ð»Ð¸
 					cout << (i & 1 ^ k & 1 ? "  " : "* ");
 				}
 			}
@@ -73,14 +73,14 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	int size;
-	cout << "Ââåäèòå ðàçìåð äîñêè: "; cin >> size;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð´Ð¾ÑÐºÐ¸: "; cin >> size;
 	clock_t start; double duration;
 	start = clock();
 	//chess_v1(size);
 	//chess_v2(size);
 	chess_v3(size);
 	duration = (clock() - start) / static_cast<double>(CLOCKS_PER_SEC);
-	cout << "Âðåìÿ âûïîëíåíèÿ: " << duration << '\xA';
+	cout << "Ð’Ñ€ÐµÐ¼Ñ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ: " << duration << '\xA';
 }
 
 //test
